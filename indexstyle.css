@@ -1,0 +1,735 @@
+
+/* Importación de la tipo */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap');
+
+body {
+    background: #0b0c0e;
+    min-height: 100vh; 
+    font-family: 'Inter', sans-serif;
+    color: #f3f4f6; 
+    font-size: 1.2rem;
+    margin: 0;
+    padding: 0;
+    letter-spacing: -0.01em;
+}
+
+/* ---  NAV BAR  --- */
+.nav-medieval {
+    background-color: rgba(11, 12, 14, 0.8); 
+    backdrop-filter: blur(12px); 
+    -webkit-backdrop-filter: blur(12px);
+    padding: 24px 0;
+    position: sticky; 
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08); 
+}
+
+.nav-medieval ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.nav-medieval a {
+    color: #b3b9c4;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+.nav-medieval a:hover {
+    color: #c5f200;
+}
+
+/* para que no se vea la palabra menu en la computadora */
+.menu-toggle {
+    display: none;
+}
+
+/* --- TITULO --- */
+.cabecera-medieval {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 0 40px 0; 
+    text-align: center;
+}
+
+.cabecera-medieval h1 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;            
+    font-size: 4.5rem;           
+    color: #ffffff;              
+    text-transform: uppercase; 
+    letter-spacing: -0.03em;     
+    margin: 0;
+    position: relative;
+}
+
+/* punto final en colorcito neon para mas onda*/
+.cabecera-medieval h1::after {
+    content: '.';
+    color: #c5f200;              
+    font-family: 'Inter', sans-serif;
+}
+
+/* Ajuste para pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+    .cabecera-medieval h1 {
+        font-size: 2.2rem;       
+        padding: 0 20px;
+    }
+}
+
+/* --- CONTENEDORES DE TEXTO Y MÁRGENES --- */
+main, section, .contenido {
+    max-width: 800px; 
+    margin: 40px auto; 
+    padding: 0;   
+}
+
+section {
+    margin-bottom: 100px; 
+}
+
+/* --- TIPOGRAFÍA --- */
+h2 {
+    font-family: 'Playfair Display', serif; 
+    font-weight: 400;
+    font-size: 2.5rem;
+    letter-spacing: -0.02em;
+    text-align: left; 
+    color: #c5f200;     
+    margin-top: 0;
+    margin-bottom: 30px; 
+}
+
+h3 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    font-size: 1.75rem;
+    letter-spacing: -0.01em;
+    text-align: left; 
+    color: #ffffff;
+    margin-top: 40px; 
+    margin-bottom: 20px;
+}
+
+p {
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    line-height: 1.75;
+    text-align: justify;
+    color: #b3b9c4; 
+    margin-bottom: 24px;
+}
+
+strong {
+    color: #ffffff; 
+    font-weight: 500;
+}
+
+em {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+}
+
+/* --- FOTOS  --- */
+.enlace-monasterio img:hover, #foto-caballeros:hover, #foto-bosque-medieval:hover {
+    transform: scale(1.01);
+}
+
+.enlace-monasterio img, #foto-caballeros, #foto-bosque-medieval {
+    display: block;
+    margin: 40px auto; 
+    width: 100%;       
+    max-width: 100%; 
+    height: auto;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: transform 0.3s;
+    
+    /* --- EFECTO BLANCO Y NEGRO --- */
+    filter: grayscale(90%); 
+    opacity: 0.7;            
+    transition: filter 0.5s ease, opacity 0.5s ease, transform 0.5s ease; 
+}
+
+/* para que al pasar el mouse se vea a color */
+.enlace-monasterio img:hover, #foto-caballeros:hover, #foto-bosque-medieval:hover {
+    filter: grayscale(0%);  
+    opacity: 15;              
+    transform: scale(1.01);
+}
+
+/* --- GALERÍA --- */
+.contenedor-galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 32px; 
+    align-items: start;
+    margin-top: 40px;
+}
+
+.item-galeria {
+    margin: 0;
+    padding: 0;
+    background: #141619; 
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.item-galeria img {
+    width: 100%;
+    height: 220px; 
+    object-fit: cover; 
+    border-radius: 0;
+    
+    /* --- EFECTO BLANCO Y NEGRO --- */
+    filter: grayscale(100%);
+    opacity: 0.6;
+    transition: filter 0.5s ease, opacity 0.5s ease;
+}
+
+/* Al pasar el mouse se vea colorcito*/
+.item-galeria:hover img {
+    filter: grayscale(0%);
+    opacity: 1;
+}
+.item-galeria figcaption {
+    padding: 20px;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    color: #8e939e;
+    text-align: left; 
+    font-style: normal;
+}
+
+.item-galeria:hover {
+    border-color: rgba(255, 255, 255, 0.15);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.5);
+}
+
+.item-galeria:hover img {
+    filter: none; 
+}
+
+/* --- DIVISORES --- */
+.divisor-final {
+    margin-top: 80px;
+    padding: 60px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    text-align: center;
+}
+
+.cita-bibliografica {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    line-height: 1.4;
+    color: #ffffff; 
+    opacity: 1;
+    text-align: center;
+} 
+
+/* --- GRID PRINCIPAL --- */
+.grid-principal {
+    display: grid;
+    grid-template-columns: 280px 1fr 280px; 
+    gap: 64px; 
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 40px;
+    align-items: start; 
+}
+
+.contenido {
+    min-width: 0; 
+}
+
+/* --- SIDEBARS --- */
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 48px; 
+}
+
+.contenedor-info {
+    background: #141619; 
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    padding: 24px;
+    box-shadow: none;
+}
+
+.contenedor-info h3 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #ffffff;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding-bottom: 12px;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.bio-ampliada {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem; 
+    line-height: 1.6;
+    margin-bottom: 16px;
+    color: #8e939e;
+    text-align: left;
+}
+
+.foto-autor {
+    width: 100%;
+    height: 180px; 
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.contenedor-info:hover .foto-autor {
+    filter: none; 
+    transform: scale(1.02);
+}
+
+/* --- COLUMNA DERECHA --- */
+.columna-derecha {
+    padding-top: 0; 
+    display: flex; 
+    flex-direction: column;
+    height: auto; 
+    gap: 48px;
+    box-sizing: border-box;
+    box-shadow: none;
+}
+
+.columna-derecha .contenedor-info:first-child {
+    margin-top: 0; 
+}
+
+/* --- FORMULARIOS --- */
+.formulario-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.input-sidebar {
+    background: #0b0c0e; 
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 12px;
+    color: #ffffff;
+    border-radius: 6px;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    width: 100%;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+.input-sidebar::placeholder {
+    color: #4a4f5a;
+}
+
+.input-sidebar:focus {
+    outline: none;
+    border-color: #c5f200; 
+}
+
+.boton-medieval-full {
+    background-color: #ffffff; 
+    color: #0b0c0e;
+    border: none;
+    padding: 14px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: all 0.3s;
+    margin-top: 8px;
+}
+
+.boton-medieval-full:hover {
+    background-color: #c5f200;
+}
+
+/* --- SPOTIFY / PODCAST--- */
+.podcast-posicionado {
+    background-color: #141619;
+    border-left: 3px solid #c5f200; 
+    padding: 24px;
+}
+
+.podcast-posicionado h3 {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    color: #ffffff;
+}
+
+.bio-breve {
+    font-size: 1rem;
+    color: #8e939e;
+}
+
+.boton-spotify {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1DB954;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 6px; 
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    margin-top: 16px;
+    font-size: 0.8rem;
+    letter-spacing: 0.02em;
+    transition: 0.3s;
+}
+
+.boton-spotify:hover {
+    background-color: #1ed760;
+    transform: translateY(-2px);
+}
+
+/* --- FOOTER --- */
+.footer-medieval {
+    background-color: #0b0c0e;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 60px 20px;
+    margin-top: 100px;
+    color: #8e939e;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.footer-info h3 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.15em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.footer-info p {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    margin: 8px 0;
+    text-align: center;
+    color: #8e939e;
+}
+/* A PARTIR DE ACA EMPIEZA INFO DEL SEGUNDO PARCIAL: HACERLO RESPONSIVE, OCULTAR LO DEL MENÚ,ETC*/
+
+/* pagina historia*/
+.cuerpo-historia {
+    max-width: 800px;
+    margin: 60px auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.cuerpo-historia h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.descripcion-historia {
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    line-height: 1.75;
+    color: #b3b9c4;
+    margin-bottom: 40px;
+}
+
+/* linea de tiempo! */
+.linea-tiempo {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    border-left: 3px solid rgba(255, 255, 255, 0.1); 
+    padding-left: 30px;
+}
+
+.bloque-hito {
+    background-color: #141619;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-left: 3px solid #c5f200;    
+    border-radius: 8px;
+    padding: 24px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.bloque-hito:hover {
+    transform: translateX(8px);
+    border-color: #c5f200; 
+}
+
+
+.fecha-hito {
+    display: inline-block;
+    color: #c5f200;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 8px;
+}
+
+.bloque-hito h3 {
+    margin-top: 0;
+    margin-bottom: 12px;
+    font-size: 1.4rem;
+    color: #ffffff;
+}
+
+.bloque-hito p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #b3b9c4;
+    margin: 0;
+    text-align: left;
+}
+/* --- AGENDA --- */
+
+
+.grid-agenda {
+    display: grid;
+    grid-template-columns: 1fr 280px;
+    max-width: 1200px;
+    margin: 50px auto 60px auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+    align-items: start; 
+}
+
+.introduccion-agenda {
+    margin: 0 0 30px 0; 
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.introduccion-agenda h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    color: #ffffff;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.introduccion-agenda p {
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    line-height: 1.7;
+    color: #b3b9c4;
+    font-size: 1.1rem;
+    margin-bottom: 0;
+}
+
+.linea-tiempo-agenda {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/*  Calendario */
+.tabla-calendario {
+    width: 100%;
+    padding: 10px 50px;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.tabla-calendario th {
+    color: #ffffff;
+    font-weight: 600;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.tabla-calendario td {
+    padding: 10px 0;
+    color: #b3b9c4;
+}
+
+/* Días fuera de junio van en otro colorcito */
+.tabla-calendario .mes-siguiente {
+    color: rgba(255, 255, 255, 0.15);
+}
+
+/* Día destacado con evento */
+.tabla-calendario .dia-evento {
+    background-color: rgba(197, 242, 0, 0.15); 
+    color: #c5f200; 
+    font-weight: 600;
+    border-radius: 4px;
+}
+
+.leyenda-calendario {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 18px;
+    padding-top: 9px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.punto-leyenda {
+    width: 7px;
+    height: 7px;
+    background-color: #c5f200;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+/* ===================================================
+   RESPONSIVE DESIGN: ADAPTACIÓN 
+   =================================================== */
+
+@media (max-width: 1024px) {
+    
+    /* --- MENÚ HAMBURGUESA  --- */
+    .menu-toggle {
+        display: block;
+        background-color: #141619;
+        color: #c5f200;
+        border: 1px solid #c5f200;
+        padding: 10px 20px;
+        font-family: 'Inter', sans-serif;
+        font-weight: 600;
+        cursor: pointer;
+        border-radius: 4px;
+        margin: 0 auto;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+    }
+
+    .nav-medieval ul.nav-links {
+        display: none; 
+        flex-direction: column ;
+        align-items: center;
+        gap: 18px;
+        margin-top: 20px;
+        padding: 0;
+        width: 100%;
+    }
+    .nav-medieval ul.nav-links.active {
+        display: flex;
+    }
+    .nav-links {
+        display: none; /* Oculta los enlaces por defecto */
+        flex-direction: column;
+        align-items: center;
+        gap: 18px;
+        margin-top: 20px;
+        padding: 0;
+        width: 100%;
+    }
+    .nav-links.active {
+        display: flex ; 
+    }
+
+    /* --- REESTRUCTURACIÓN DE LAS GRILLAS) --- */
+    .grid-principal, .grid-agenda, .cuerpo-historia {
+        display: flex;;
+        flex-direction: column; 
+        gap: 30px;
+        padding: 0 15px ;
+        margin-top: 25px;
+        box-sizing: border-box;
+    }
+
+
+    .contenido, .sidebar, .columna-izquierda, .columna-derecha {
+        width: 100%;
+        max-width: 100% ;
+        box-sizing: border-box;
+        float: none; 
+    }
+
+    /* --- ORDEN VISUAL EN LA HOME --- */
+    .grid-principal {
+        display: flex;
+        flex-direction: column; 
+    }
+    
+    .grid-principal .contenido {
+        order: 1;
+    }
+    .grid-principal .columna-izquierda {
+        order: 2 ; 
+    }
+    .grid-principal .columna-derecha {
+        order: 3; 
+    }
+
+    /* --- CONTROL DE IMÁGENES --- */
+    .contenedor-info img, 
+    .galeria-medieval img, 
+    figure img, 
+    img {
+        width: 100% ;
+        max-width: 100%t;
+        height: auto; 
+        display: block;
+        object-fit: cover;
+        margin: 10px auto;
+    }
+
+    /* --- SOLUCIÓN DE ESPACIOS QUE SE ROMPEN --- */
+    .contenedor-info {
+        width: 100%;
+        box-sizing:border-box;
+        margin-bottom: 10px;
+        padding: 30px; 
+    }
+
+    .tabla-calendario {
+        width: 100%;
+        padding: 0;
+        margin: 15px 0;
+        border-collapse: collapse;
+    }
+
+    .tabla-calendario td, .tabla-calendario th {
+        padding: 10px 4px;
+        font-size: 0.85rem;
+    }
+
+    .formulario-sidebar {
+        gap: 14px;
+    }
+    
+    .input-sidebar {
+        font-size: 1rem; 
+    }
+}
+

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda Cultural - Crónicas del Medioevo</title>
+    <link rel="stylesheet" href="indexstyle.css">
+</head>
+<body>
+
+    <nav class="nav-medieval">
+        <button id="boton-menu" class="menu-toggle">MENÚ</button>
+        <ul id="menu-enlaces" class="nav-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="historia.html">Hitos Históricos</a></li>
+            <li><a href="agenda.html">Agenda Cultural</a></li>
+            <li><a href="quienessomos.html">Quienes Somos</a></li>
+        </ul>
+    </nav>
+
+    <header class="cabecera-medieval">
+        <h1>Agenda Cultural</h1>
+    </header>
+
+    <div class="grid-agenda">
+        
+        <main class="contenido">
+            <section class="introduccion-agenda">
+                <h2>Próximos Eventos y Seminarios</h2>
+                <p>Te invitamos a participar de las actividades académicas, debates y exposiciones organizadas para profundizar en el análisis de la espacialidad, el arte y la sociedad de la Edad Media. Todas las actividades requieren inscripción previa.</p>
+            </section>
+
+            <section class="linea-tiempo-agenda">
+                <article class="bloque-hito">
+                    <span class="fecha-hito">24 de Junio, 19:00 hs</span>
+                    <h3>Coloquio: El Impacto de Cluny en la Europa Feudal</h3>
+                    <p>Un encuentro virtual interactivo con especialistas internacionales donde debatiremos cómo la reforma cluniacense reconfiguró las dinámicas de poder territorial y espiritual en el Occidente medieval. Ideal para estudiantes de historia y diseño arquitectónico.</p>
+                </article>
+
+                <article class="bloque-hito">
+                    <span class="fecha-hito">27 de Junio, 18:30 hs</span>
+                    <h3>Clase Abierta: Espacialidad y Simbología Románica</h3>
+                    <p>Análisis en profundidad sobre la construcción del espacio sagrado en los siglos XI y XII. Analizaremos de qué manera la escasez de luz exterior y el grosor monumental de los muros respondían a una necesidad teológica y de ordenamiento social.</p>
+                </article>
+
+                <article class="bloque-hito">
+                    <span class="fecha-hito">28 de Junio, 20:00 hs</span>
+                    <h3>Mesa de Debate: La Revolución del Gótico y la Luz</h3>
+                    <p>Estudio de las innovaciones técnicas del siglo XII (arcos ojivales y arbotantes) que permitieron "inundar" de luz las catedrales. Analizaremos este hito desde un enfoque técnico y filosófico, desmitificando la idea de una Edad Media puramente oscura.</p>
+                </article>
+            </section>
+        </main>
+
+        <aside class="sidebar columna-derecha">
+            
+            <div class="contenedor-info">
+                <h3>Calendario Cultural</h3>
+                <p class="subtitulo-sidebar">Actividades del mes de Junio</p>
+                
+                <table class="tabla-calendario">
+                    <thead>
+                        <tr>
+                            <th>L</th>
+                            <th>M</th>
+                            <th>Mi</th>
+                            <th>J</th>
+                            <th>V</th>
+                            <th>S</th>
+                            <th>D</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>6</td>
+                            <td>7</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>9</td>
+                            <td>10</td>
+                            <td>11</td>
+                            <td>12</td>
+                            <td>13</td>
+                            <td>14</td>
+                        </tr>
+                        <tr>
+                            <td>15</td>
+                            <td>16</td>
+                            <td>17</td>
+                            <td>18</td>
+                            <td>19</td>
+                            <td>20</td>
+                            <td>21</td>
+                        </tr>
+                        <tr>
+                            <td>22</td>
+                            <td>23</td>
+                            <td class="dia-evento" title="Coloquio Cluny">24</td>
+                            <td>25</td>
+                            <td>26</td>
+                            <td>27</td>
+                            <td>28</td>
+                        </tr>
+                        <tr>
+                            <td>29</td>
+                            <td>30</td>
+                            <td class="mes-siguiente">1</td>
+                            <td class="mes-siguiente">2</td>
+                            <td class="mes-siguiente">3</td>
+                            <td class="mes-siguiente">4</td>
+                            <td class="mes-siguiente">5</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <div class="leyenda-calendario">
+                    <span class="punto-leyenda"></span>
+                    <small class="texto-leyenda">Días con eventos</small>
+                </div>
+            </div>
+
+            <div class="contenedor-info" id="bloque-inscripcion">
+                <h3>Inscripción</h3>
+                <p class="subtitulo-sidebar">Reserva tu lugar para los coloquios.</p>
+                
+                <form id="formulario-agenda" class="formulario-sidebar">
+                    <label for="ins-nombre" class="sr-only">Nombre completo</label>
+                    <input type="text" id="ins-nombre" placeholder="Nombre completo" required class="input-sidebar">
+                    
+                    <label for="ins-email" class="sr-only">Correo electrónico</label>
+                    <input type="email" id="ins-email" placeholder="Correo electrónico" required class="input-sidebar">
+                    
+                    <label for="ins-edad" class="sr-only">Edad (Mín. 18 años)</label>
+                    <input type="number" id="ins-edad" min="18" placeholder="Edad (Mín. 18 años)" required class="input-sidebar">
+                    
+                    <label for="ins-evento" class="sr-only">Selecciona un evento</label>
+                    <select id="ins-evento" required class="input-sidebar select-medieval">
+                        <option value="" disabled selected>Selecciona un evento</option>
+                        <option value="Cluny">Coloquio: Impacto de Cluny</option>
+                        <option value="Romanico">Clase: Simbología Románica</option>
+                        <option value="Gotico">Debate: La Revolución del Gótico</option>
+                    </select>
+
+                    <label for="ins-comentario" class="sr-only">¿Alguna pregunta o comentario? (Opcional)</label>
+                    <textarea id="ins-comentario" placeholder="¿Alguna pregunta o comentario? (Opcional)" class="input-sidebar textarea-medieval" rows="3"></textarea>
+                    
+                    <div id="alerta-error" class="alerta-error-sidebar"></div>
+
+                    <button type="submit" class="boton-medieval-full">Inscribirme</button>
+                </form>
+            </div>
+
+        </aside>
+
+    </div>
+
+    <footer class="footer-medieval">
+        <div class="footer-info">
+            <h3>Crónicas del Medioevo</h3>
+            <p>Segundo Parcial - Diseño y Desarrollo Web</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
